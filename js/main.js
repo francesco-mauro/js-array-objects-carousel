@@ -26,6 +26,7 @@ const images = [
   },
 ];
 
+// 1. Stampare tutte le immagini in pagina tramite js
 
 const carouselImagesDiv = document.querySelector('.my-carousel-images');
 const thumbnailsDiv = document.querySelector('.my-thumbnails');
@@ -33,6 +34,7 @@ const thumbnailsDiv = document.querySelector('.my-thumbnails');
 images.forEach((item, index) => {
     console.log(item);
     const carouselItem = document.createElement('div');
+    // 2. imposta lo stato di partenza
     carouselItem.className = 'my-carousel-item' + (index === 0 ? ' active' : '');
     carouselItem.innerHTML = `
         <img class="img-fluid" src="${item.image}" alt="${item.title}">
@@ -49,6 +51,9 @@ images.forEach((item, index) => {
     thumbnailItem.alt = `Thumbnail of ${item.title}`;
     thumbnailsDiv.appendChild(thumbnailItem);
 });
+
+// richiamo la funzione
+setupControls();
 
 
 
