@@ -7,3 +7,4 @@ Aggiungere il **ciclo infinito** del carosello. Ovvero se la miniatura attiva è
 
 
 1. Stampare tutte le immagini in pagina tramite js
+2. imposta lo stato di partenza
