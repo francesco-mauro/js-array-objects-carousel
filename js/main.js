@@ -25,3 +25,30 @@ const images = [
     text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
   },
 ];
+
+// Assuming the array 'images' is already declared in an external .js file or earlier in the script
+const carouselImagesDiv = document.querySelector('.my-carousel-images');
+const thumbnailsDiv = document.querySelector('.my-thumbnails');
+
+images.forEach((item, index) => {
+    console.log(item);
+    const carouselItem = document.createElement('div');
+    carouselItem.className = 'my-carousel-item' + (index === 0 ? ' active' : '');
+    carouselItem.innerHTML = `
+        <img class="img-fluid" src="${item.image}" alt="${item.title}">
+        <div class="item-description px-3">
+            <h2>${item.title}</h2>
+            <p>${item.text}</p>
+        </div>
+    `;
+    carouselImagesDiv.appendChild(carouselItem);
+
+    const thumbnailItem = document.createElement('img');
+    thumbnailItem.className = 'img-fluid my-thumbnail' + (index === 0 ? ' active' : '');
+    thumbnailItem.src = item.image;
+    thumbnailItem.alt = `Thumbnail of ${item.title}`;
+    thumbnailsDiv.appendChild(thumbnailItem);
+});
+
+
+
