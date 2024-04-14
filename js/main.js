@@ -26,7 +26,7 @@ const images = [
   },
 ];
 
-// Assuming the array 'images' is already declared in an external .js file or earlier in the script
+
 const carouselImagesDiv = document.querySelector('.my-carousel-images');
 const thumbnailsDiv = document.querySelector('.my-thumbnails');
 
